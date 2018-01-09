@@ -1,108 +1,433 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-		<script type="text/javascript" src="script.js"></script>
-		<title>Amaar Quadri</title>
-	</head>
+		<title>Online Phonebook</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>		
+	</head>	
 	<body>
 		<div class="header">
-			<div id="menu_button"><h1>MENU><h1></div>
-			<div class="drop_down_menu">
+			<h1>Phonebook</h1>
+			<ul>
+				<li id="buttonSelected">Home</li>
+				<li>Support</li>
+				<li>About Us</li>
+				<li>Blog</li>
+				<li>Contact Us</li>
+			</ul>
+		</div>
+		<div class="content">
+			<h1>Welcome to the World's Simplest Online Phonebook</h1>
+			<p>Click "add" to add an entry to your phonebook. You must enter in a first, last name and gender, but the rest is optional.</p>
+			<p>Click list to list out all the names in your phonebook.</p>
+			<p>Click search to search for an entry by any of its attributes.</p>
+			<ul>
+				<li id="button6">Add</li>
+				<li id="button7">List</li>
+				<li id="button8">Search</li>
+			</ul>
+			<div class="console">
 				<table>
-					<tr>
-						<td><a href="#">Home</a></td>
+					<tr id="firstNameRow">
+						<td>First Name:</td>
+						<td><input type="text" name="firstName" value=""> *required</td>
 					</tr>
 					<tr>
-						<td><a href="#">About</a></td>
+						<td>Middle Name:</td>
+						<td><input type="text" name="middleName" value=""></td>
+					</tr>
+					<tr id="lastNameRow">
+						<td>Last Name:</td>
+						<td><input type="text" name="lastName" value=""> *required</td>
+					</tr>
+					<tr id="genderRow">
+						<td>Gender:</td>
+						<td><input type="radio" name="genderMale"><span id="maleWord">Male</span> &nbsp; &nbsp; <input type="radio" name="genderFemale"><span id="femaleWord">Female</span> &nbsp; &nbsp;&nbsp;  *required</td>
 					</tr>
 					<tr>
-						<td><a href="#">Contact Me</a></td>
+						<td>Nickname:</td>
+						<td><input type="text" name="nickname" value=""></td>
+					</tr>
+					<tr id="ageRow">
+						<td>Age:</td>
+						<td><input type="text" name="age" value=""></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" name="email" value=""></td>
+					</tr>
+					<tr id="phoneNumberRow">
+						<td>Phone Number:</td>
+						<td><input type="text" name="phoneNumber" value=""></td>
+					</tr>
+					<tr>
+						<td>Birthday:</td>
+						<td>
+							<select id="month">
+								<option>Month</option>
+			                    <option>Jan.</option>
+			                    <option>Feb.</option>
+			                    <option>Mar.</option>
+			                    <option>Apr.</option>
+			                    <option>May</option>
+			                    <option>Jun.</option>
+			                    <option>Jul.</option>
+			                    <option>Aug.</option>
+			                    <option>Sep.</option>
+			                    <option>Oct.</option>
+			                    <option>Nov.</option>
+			                    <option>Dec.</option>
+							</select>
+							<select id="day">
+								<option>Day</option>
+			                    <option>1</option>
+			                    <option>2</option>
+			                    <option>3</option>
+			                    <option>4</option>
+			                    <option>5</option>
+			                    <option>6</option>
+			                    <option>7</option>
+			                    <option>8</option>
+			                    <option>9</option>
+			                    <option>10</option>
+			                    <option>11</option>
+			                    <option>12</option>
+			                    <option>13</option>
+			                    <option>14</option>
+			                    <option>15</option>
+			                    <option>16</option>
+			                    <option>17</option>
+			                    <option>18</option>
+			                    <option>19</option>
+			                    <option>20</option>
+			                    <option>21</option>
+			                    <option>22</option>
+			                    <option>23</option>
+			                    <option>24</option>
+			                    <option>25</option>
+			                    <option>26</option>
+			                    <option>27</option>
+			                    <option>28</option>
+			                    <option>29</option>
+			                    <option>30</option>
+			                    <option>31</option>
+							</select>
+							<select id="year">
+								<option>Year</option>
+			                    <option>2015</option>
+			                    <option>2014</option>
+			                    <option>2013</option>
+			                    <option>2012</option>
+			                    <option>2011</option>
+			                    <option>2010</option>
+			                    <option>2009</option>
+			                    <option>2008</option>
+			                    <option>2007</option>
+			                    <option>2006</option>
+			                    <option>2005</option>
+			                    <option>2004</option>
+			                    <option>2003</option>
+			                    <option>2002</option>
+			                    <option>2001</option>
+			                    <option>2000</option>
+			                    <option>1999</option>
+			                    <option>1998</option>
+			                    <option>1997</option>
+			                    <option>1996</option>
+			                    <option>1995</option>
+			                    <option>1994</option>
+			                    <option>1993</option>
+			                    <option>1992</option>
+			                    <option>1991</option>
+			                    <option>1990</option>
+			                    <option>1989</option>
+			                    <option>1988</option>
+			                    <option>1987</option>
+			                    <option>1986</option>
+			                    <option>1985</option>
+			                    <option>1984</option>
+			                    <option>1983</option>
+			                    <option>1982</option>
+			                    <option>1981</option>
+			                    <option>1980</option>
+			                    <option>1979</option>
+			                    <option>1978</option>
+			                    <option>1977</option>
+			                    <option>1976</option>
+			                    <option>1975</option>
+			                    <option>1974</option>
+			                    <option>1973</option>
+			                    <option>1972</option>
+			                    <option>1971</option>
+			                    <option>1970</option>
+			                    <option>1969</option>
+			                    <option>1968</option>
+			                    <option>1967</option>
+			                    <option>1966</option>
+			                    <option>1965</option>
+			                    <option>1964</option>
+			                    <option>1963</option>
+			                    <option>1962</option>
+			                    <option>1961</option>
+			                    <option>1960</option>
+			                    <option>1959</option>
+			                    <option>1958</option>
+			                    <option>1957</option>
+			                    <option>1956</option>
+			                    <option>1955</option>
+			                    <option>1954</option>
+			                    <option>1953</option>
+			                    <option>1952</option>
+			                    <option>1951</option>
+			                    <option>1950</option>
+			                    <option>1949</option>
+			                    <option>1948</option>
+			                    <option>1947</option>
+			                    <option>1946</option>
+			                    <option>1945</option>
+			                    <option>1944</option>
+			                    <option>1943</option>
+			                    <option>1942</option>
+			                    <option>1941</option>
+			                    <option>1940</option>
+			                    <option>1939</option>
+			                    <option>1938</option>
+			                    <option>1937</option>
+			                    <option>1936</option>
+			                    <option>1935</option>
+			                    <option>1934</option>
+			                    <option>1933</option>
+			                    <option>1932</option>
+			                    <option>1931</option>
+			                    <option>1930</option>
+			                    <option>1929</option>
+			                    <option>1928</option>
+			                    <option>1927</option>
+			                    <option>1926</option>
+			                    <option>1925</option>
+			                    <option>1924</option>
+			                    <option>1923</option>
+			                    <option>1922</option>
+			                    <option>1921</option>
+			                    <option>1920</option>
+			                    <option>1919</option>
+			                    <option>1918</option>
+			                    <option>1917</option>
+			                    <option>1916</option>
+			                    <option>1915</option>
+			                    <option>1914</option>
+			                    <option>1913</option>
+			                    <option>1912</option>
+			                    <option>1911</option>
+			                    <option>1910</option>
+			                    <option>1909</option>
+			                    <option>1908</option>
+			                    <option>1907</option>
+			                    <option>1906</option>
+			                    <option>1905</option>
+							</select>
+						</td>
 					</tr>
 				</table>
+				<div id="button9">Add to Phonebook</div>
+				<h1 id="notice">Your enrty has been added.</h1>
 			</div>
-			<h1 id="name">Amaar Quadri</h1>
-			<h1 id="email">amaarquadri@gmail.com</h1>
-		</div>
-		<div class="left">
-			<img src="https://lh3.googleusercontent.com/kiM9n7mJCq8sZ9wHS_xUTsm9-RRGhhkbRcpDmYPgM8s=w800-h534-no"/>
-			<h1>Father Micheal McGivney Catholic Academy Mission Statement</h1>
-			<p><a href="http://fmmh.ycdsb.ca/">Father Michael McGivney Catholic Academy</a> is a Catholic learning community committed to the highest standards of academic excellence.  We celebrate diversity in our community and provide opportunities for all our students to become life long learners committed to global citizenship.</p>
-			<h1>The IB (International Bacauralette) Program</h1>
-			<p>The IB program is an accelerated high school education, respected by leading universities across the globe. It has many <a href="http://www.ibo.org/en/benefits/benefits-for-students/">benefits for students</a> including better preparation for university.</p>
-		</div>
-		<div class="right">
-			<h1 id="main_title">Resume</h1>
-			<h1>Qualifications</h1>
-			<ul>
-				<li>OSSD (Ontario SecondarySchool Diploma)</li>
-				<li>International Baccauralette Diploma</li>
-				<li>Fluent in French</li>
-				<li>Skilled in HTML, CSS, and Javascript</li>
-			</ul>
-			<h1>Experience</h1>
-			<ul>
-				<li>Volunteered at <a href="http://www.msh.on.ca/">Markham-Stoughville Hospital</a> for 50 hours</li>
-				<li>Volunteered at <a href="http://www.kumon.ca/">Kumon</a> teaching math for 30 hours</li>
-				<li>President of Science Club at school during grade 11 and 12</li>
-			</ul>
-			<h1>Awards and Recognitions</h1>
-			<ul>
-				<li>Perfect on <a href="http://www.cemc.uwaterloo.ca/contests/past_contests/FermatResults.pdf">Waterloo Math Contest</a> in grade 11</li>
-				<li>Honour Roll throughout high school</li>
-				<li>High School Valedictorian</li>
-			</ul>
-			<div class="table">
-				<table>
-					<th colspan="2" id="table_header">Top 6 Grade 12 Courses</th>
-					<tb>
-						<tr>
-							<td>Advanced Functions*<td>
-							<td>7</td>
-						</tr>
-						<tr>
-							<td>Calculus and Vectors<td>
-							<td>7</td>
-						</tr>
-						<tr>
-							<td>Physics<td>
-							<td>7</td>
-						</tr>
-						<tr>
-							<td>Chemistry<td>
-							<td>6</td>
-						</tr>
-						<tr>
-							<td>English<td>
-							<td>5</td>
-						</tr>
-						<tr>
-							<td>French*<td>
-							<td>6</td>
-						</tr>
-						<tr>
-							<td id="small">*taken during grade 11</td>
-						</tr>
-					</tb>
-				</table>
+			<div class="listConsole">
+			</div>
+			<div class="searchConsole">
+				<div class="container">
+					Pick a category to search in: 
+					<select id="attributes" value="Everywhere">
+						<option>Everywhere</option>
+						<option>First Name</option>
+						<option>Middle Name</option>
+						<option>Last Name</option>
+						<option>Gender</option>
+						<option>Nickname</option>
+						<option>Age</option>
+						<option>Email</option>
+						<option>Phone Number</option>
+						<option>Birthday</option>
+					</select><br><br>
+					<span id="searchMessage">Enter something to search for here:</span><br>
+					<input type="text" name="search" value="">
+					<select id="searchGender" value="Gender">
+						<option>Gender</option>
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+					<input type="text" name="searchAge" value="">
+					<div class="searchDate">
+						<select id="searchMonth">
+							<option>Month</option>
+							<option>Jan.</option>
+							<option>Feb.</option>
+							<option>Mar.</option>
+							<option>Apr.</option>
+							<option>May</option>
+							<option>Jun.</option>
+							<option>Jul.</option>
+							<option>Aug.</option>
+							<option>Sep.</option>
+							<option>Oct.</option>
+							<option>Nov.</option>
+							<option>Dec.</option>
+						</select>
+						<select id="searchDay">
+							<option>Day</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+							<option>25</option>
+							<option>26</option>
+							<option>27</option>
+							<option>28</option>
+							<option>29</option>
+							<option>30</option>
+							<option>31</option>
+						</select>
+						<select id="searchYear">
+							<option>Year</option>
+							<option>2015</option>
+							<option>2014</option>
+							<option>2013</option>
+							<option>2012</option>
+							<option>2011</option>
+							<option>2010</option>
+							<option>2009</option>
+							<option>2008</option>
+							<option>2007</option>
+							<option>2006</option>
+							<option>2005</option>
+							<option>2004</option>
+							<option>2003</option>
+							<option>2002</option>
+							<option>2001</option>
+							<option>2000</option>
+							<option>1999</option>
+							<option>1998</option>
+							<option>1997</option>
+							<option>1996</option>
+							<option>1995</option>
+							<option>1994</option>
+							<option>1993</option>
+							<option>1992</option>
+							<option>1991</option>
+							<option>1990</option>
+							<option>1989</option>
+							<option>1988</option>
+							<option>1987</option>
+							<option>1986</option>
+							<option>1985</option>
+							<option>1984</option>
+							<option>1983</option>
+							<option>1982</option>
+							<option>1981</option>
+							<option>1980</option>
+							<option>1979</option>
+							<option>1978</option>
+							<option>1977</option>
+							<option>1976</option>
+							<option>1975</option>
+							<option>1974</option>
+							<option>1973</option>
+							<option>1972</option>
+							<option>1971</option>
+							<option>1970</option>
+							<option>1969</option>
+							<option>1968</option>
+							<option>1967</option>
+							<option>1966</option>
+							<option>1965</option>
+							<option>1964</option>
+							<option>1963</option>
+							<option>1962</option>
+							<option>1961</option>
+							<option>1960</option>
+							<option>1959</option>
+							<option>1958</option>
+							<option>1957</option>
+							<option>1956</option>
+							<option>1955</option>
+							<option>1954</option>
+							<option>1953</option>
+							<option>1952</option>
+							<option>1951</option>
+							<option>1950</option>
+							<option>1949</option>
+							<option>1948</option>
+							<option>1947</option>
+							<option>1946</option>
+							<option>1945</option>
+							<option>1944</option>
+							<option>1943</option>
+							<option>1942</option>
+							<option>1941</option>
+							<option>1940</option>
+							<option>1939</option>
+							<option>1938</option>
+							<option>1937</option>
+							<option>1936</option>
+							<option>1935</option>
+							<option>1934</option>
+							<option>1933</option>
+							<option>1932</option>
+							<option>1931</option>
+							<option>1930</option>
+							<option>1929</option>
+							<option>1928</option>
+							<option>1927</option>
+							<option>1926</option>
+							<option>1925</option>
+							<option>1924</option>
+							<option>1923</option>
+							<option>1922</option>
+							<option>1921</option>
+							<option>1920</option>
+							<option>1919</option>
+							<option>1918</option>
+							<option>1917</option>
+							<option>1916</option>
+							<option>1915</option>
+							<option>1914</option>
+							<option>1913</option>
+							<option>1912</option>
+							<option>1911</option>
+							<option>1910</option>
+							<option>1909</option>
+							<option>1908</option>
+							<option>1907</option>
+							<option>1906</option>
+							<option>1905</option>
+						</select>
+					</div>
+					<br><br>
+					<div id="button10">Search Phonebook!</div>
+				</div>
+				<div id="button11">Search Again!</div>
 			</div>
 		</div>
-		<div id="footer">
-			<h1>93 Peshawar Ave. Markham Ontario | (647) 767-1786</h1>
-		</div>
-		<div class="drop_down_menu">
-			<table>
-				<tr>
-					<td><a href="#">Home</a></td>
-				</tr>
-				<tr>
-					<td><a href="#">About</a></td>
-				</tr>
-				<tr>
-					<td><a href="#">Contact Me</a></td>
-				</tr>
-			</table>
-		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 	</body>
-<html>
+</html>
