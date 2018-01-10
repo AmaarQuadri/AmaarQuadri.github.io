@@ -1,436 +1,905 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Amaar Quadri's Resume</title>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-	</head>	
+<html lang="en">
+  <head>
+		<title>Timber</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'>
+
+		<link rel="stylesheet" type="text/css" href="css/slicknav.css">
+		<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+		<script type="text/javascript" src="js/camera.min.js"></script>
+		<script type="text/javascript" src="js/myscript.js"></script>
+		<script src="js/sorting.js" type="text/javascript"></script>
+		<script src="js/jquery.isotope.js" type="text/javascript"></script>
+		<!--script type="text/javascript" src="js/jquery.nav.js"></script-->
+		
+
+		<script>
+			jQuery(function(){
+					jQuery('#camera_wrap_1').camera({
+					transPeriod: 500,
+					time: 3000,
+					height: '490px',
+					thumbnails: false,
+					pagination: true,
+					playPause: false,
+					loader: false,
+					navigation: false,
+					hover: false
+				});
+			});
+		</script>
+		
+	</head>
 	<body>
-		<div class="header">
-			<h1>Amaar Quadri</h1>
-			<ul>
-				<li id="buttonSelected">Home</li>
-				<li>Portfolio</li>
-				<li>Resume</li>
-				<li>Awards</li>
-				<li>Contact</li>
-			</ul>
-		</div>
-		<div class="content">
-			<h1>Welcome to the World's Simplest Online Phonebook</h1>
-			<p>Click "add" to add an entry to your phonebook. You must enter in a first, last name and gender, but the rest is optional.</p>
-			<p>Click list to list out all the names in your phonebook.</p>
-			<p>Click search to search for an entry by any of its attributes.</p>
-			<ul>
-				<li id="button6">Add</li>
-				<li id="button7">List</li>
-				<li id="button8">Search</li>
-			</ul>
-			<div class="console">
-				<table>
-					<tr id="firstNameRow">
-						<td>First Name:</td>
-						<td><input type="text" name="firstName" value=""> *required</td>
-					</tr>
-					<tr>
-						<td>Middle Name:</td>
-						<td><input type="text" name="middleName" value=""></td>
-					</tr>
-					<tr id="lastNameRow">
-						<td>Last Name:</td>
-						<td><input type="text" name="lastName" value=""> *required</td>
-					</tr>
-					<tr id="genderRow">
-						<td>Gender:</td>
-						<td><input type="radio" name="genderMale"><span id="maleWord">Male</span> &nbsp; &nbsp; <input type="radio" name="genderFemale"><span id="femaleWord">Female</span> &nbsp; &nbsp;&nbsp;  *required</td>
-					</tr>
-					<tr>
-						<td>Nickname:</td>
-						<td><input type="text" name="nickname" value=""></td>
-					</tr>
-					<tr id="ageRow">
-						<td>Age:</td>
-						<td><input type="text" name="age" value=""></td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td><input type="text" name="email" value=""></td>
-					</tr>
-					<tr id="phoneNumberRow">
-						<td>Phone Number:</td>
-						<td><input type="text" name="phoneNumber" value=""></td>
-					</tr>
-					<tr>
-						<td>Birthday:</td>
-						<td>
-							<select id="month">
-								<option>Month</option>
-			                    <option>Jan.</option>
-			                    <option>Feb.</option>
-			                    <option>Mar.</option>
-			                    <option>Apr.</option>
-			                    <option>May</option>
-			                    <option>Jun.</option>
-			                    <option>Jul.</option>
-			                    <option>Aug.</option>
-			                    <option>Sep.</option>
-			                    <option>Oct.</option>
-			                    <option>Nov.</option>
-			                    <option>Dec.</option>
-							</select>
-							<select id="day">
-								<option>Day</option>
-			                    <option>1</option>
-			                    <option>2</option>
-			                    <option>3</option>
-			                    <option>4</option>
-			                    <option>5</option>
-			                    <option>6</option>
-			                    <option>7</option>
-			                    <option>8</option>
-			                    <option>9</option>
-			                    <option>10</option>
-			                    <option>11</option>
-			                    <option>12</option>
-			                    <option>13</option>
-			                    <option>14</option>
-			                    <option>15</option>
-			                    <option>16</option>
-			                    <option>17</option>
-			                    <option>18</option>
-			                    <option>19</option>
-			                    <option>20</option>
-			                    <option>21</option>
-			                    <option>22</option>
-			                    <option>23</option>
-			                    <option>24</option>
-			                    <option>25</option>
-			                    <option>26</option>
-			                    <option>27</option>
-			                    <option>28</option>
-			                    <option>29</option>
-			                    <option>30</option>
-			                    <option>31</option>
-							</select>
-							<select id="year">
-								<option>Year</option>
-			                    <option>2015</option>
-			                    <option>2014</option>
-			                    <option>2013</option>
-			                    <option>2012</option>
-			                    <option>2011</option>
-			                    <option>2010</option>
-			                    <option>2009</option>
-			                    <option>2008</option>
-			                    <option>2007</option>
-			                    <option>2006</option>
-			                    <option>2005</option>
-			                    <option>2004</option>
-			                    <option>2003</option>
-			                    <option>2002</option>
-			                    <option>2001</option>
-			                    <option>2000</option>
-			                    <option>1999</option>
-			                    <option>1998</option>
-			                    <option>1997</option>
-			                    <option>1996</option>
-			                    <option>1995</option>
-			                    <option>1994</option>
-			                    <option>1993</option>
-			                    <option>1992</option>
-			                    <option>1991</option>
-			                    <option>1990</option>
-			                    <option>1989</option>
-			                    <option>1988</option>
-			                    <option>1987</option>
-			                    <option>1986</option>
-			                    <option>1985</option>
-			                    <option>1984</option>
-			                    <option>1983</option>
-			                    <option>1982</option>
-			                    <option>1981</option>
-			                    <option>1980</option>
-			                    <option>1979</option>
-			                    <option>1978</option>
-			                    <option>1977</option>
-			                    <option>1976</option>
-			                    <option>1975</option>
-			                    <option>1974</option>
-			                    <option>1973</option>
-			                    <option>1972</option>
-			                    <option>1971</option>
-			                    <option>1970</option>
-			                    <option>1969</option>
-			                    <option>1968</option>
-			                    <option>1967</option>
-			                    <option>1966</option>
-			                    <option>1965</option>
-			                    <option>1964</option>
-			                    <option>1963</option>
-			                    <option>1962</option>
-			                    <option>1961</option>
-			                    <option>1960</option>
-			                    <option>1959</option>
-			                    <option>1958</option>
-			                    <option>1957</option>
-			                    <option>1956</option>
-			                    <option>1955</option>
-			                    <option>1954</option>
-			                    <option>1953</option>
-			                    <option>1952</option>
-			                    <option>1951</option>
-			                    <option>1950</option>
-			                    <option>1949</option>
-			                    <option>1948</option>
-			                    <option>1947</option>
-			                    <option>1946</option>
-			                    <option>1945</option>
-			                    <option>1944</option>
-			                    <option>1943</option>
-			                    <option>1942</option>
-			                    <option>1941</option>
-			                    <option>1940</option>
-			                    <option>1939</option>
-			                    <option>1938</option>
-			                    <option>1937</option>
-			                    <option>1936</option>
-			                    <option>1935</option>
-			                    <option>1934</option>
-			                    <option>1933</option>
-			                    <option>1932</option>
-			                    <option>1931</option>
-			                    <option>1930</option>
-			                    <option>1929</option>
-			                    <option>1928</option>
-			                    <option>1927</option>
-			                    <option>1926</option>
-			                    <option>1925</option>
-			                    <option>1924</option>
-			                    <option>1923</option>
-			                    <option>1922</option>
-			                    <option>1921</option>
-			                    <option>1920</option>
-			                    <option>1919</option>
-			                    <option>1918</option>
-			                    <option>1917</option>
-			                    <option>1916</option>
-			                    <option>1915</option>
-			                    <option>1914</option>
-			                    <option>1913</option>
-			                    <option>1912</option>
-			                    <option>1911</option>
-			                    <option>1910</option>
-			                    <option>1909</option>
-			                    <option>1908</option>
-			                    <option>1907</option>
-			                    <option>1906</option>
-			                    <option>1905</option>
-							</select>
-						</td>
-					</tr>
-				</table>
-				<div id="button9">Add to Phonebook</div>
-				<h1 id="notice">Your enrty has been added.</h1>
-			</div>
-			<div class="listConsole">
-			</div>
-			<div class="searchConsole">
-				<div class="container">
-					Pick a category to search in: 
-					<select id="attributes" value="Everywhere">
-						<option>Everywhere</option>
-						<option>First Name</option>
-						<option>Middle Name</option>
-						<option>Last Name</option>
-						<option>Gender</option>
-						<option>Nickname</option>
-						<option>Age</option>
-						<option>Email</option>
-						<option>Phone Number</option>
-						<option>Birthday</option>
-					</select><br><br>
-					<span id="searchMessage">Enter something to search for here:</span><br>
-					<input type="text" name="search" value="">
-					<select id="searchGender" value="Gender">
-						<option>Gender</option>
-						<option>Male</option>
-						<option>Female</option>
-					</select>
-					<input type="text" name="searchAge" value="">
-					<div class="searchDate">
-						<select id="searchMonth">
-							<option>Month</option>
-							<option>Jan.</option>
-							<option>Feb.</option>
-							<option>Mar.</option>
-							<option>Apr.</option>
-							<option>May</option>
-							<option>Jun.</option>
-							<option>Jul.</option>
-							<option>Aug.</option>
-							<option>Sep.</option>
-							<option>Oct.</option>
-							<option>Nov.</option>
-							<option>Dec.</option>
-						</select>
-						<select id="searchDay">
-							<option>Day</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
-							<option>13</option>
-							<option>14</option>
-							<option>15</option>
-							<option>16</option>
-							<option>17</option>
-							<option>18</option>
-							<option>19</option>
-							<option>20</option>
-							<option>21</option>
-							<option>22</option>
-							<option>23</option>
-							<option>24</option>
-							<option>25</option>
-							<option>26</option>
-							<option>27</option>
-							<option>28</option>
-							<option>29</option>
-							<option>30</option>
-							<option>31</option>
-						</select>
-						<select id="searchYear">
-							<option>Year</option>
-							<option>2018</option>
-							<option>2017</option>
-							<option>2016</option>
-							<option>2015</option>
-							<option>2014</option>
-							<option>2013</option>
-							<option>2012</option>
-							<option>2011</option>
-							<option>2010</option>
-							<option>2009</option>
-							<option>2008</option>
-							<option>2007</option>
-							<option>2006</option>
-							<option>2005</option>
-							<option>2004</option>
-							<option>2003</option>
-							<option>2002</option>
-							<option>2001</option>
-							<option>2000</option>
-							<option>1999</option>
-							<option>1998</option>
-							<option>1997</option>
-							<option>1996</option>
-							<option>1995</option>
-							<option>1994</option>
-							<option>1993</option>
-							<option>1992</option>
-							<option>1991</option>
-							<option>1990</option>
-							<option>1989</option>
-							<option>1988</option>
-							<option>1987</option>
-							<option>1986</option>
-							<option>1985</option>
-							<option>1984</option>
-							<option>1983</option>
-							<option>1982</option>
-							<option>1981</option>
-							<option>1980</option>
-							<option>1979</option>
-							<option>1978</option>
-							<option>1977</option>
-							<option>1976</option>
-							<option>1975</option>
-							<option>1974</option>
-							<option>1973</option>
-							<option>1972</option>
-							<option>1971</option>
-							<option>1970</option>
-							<option>1969</option>
-							<option>1968</option>
-							<option>1967</option>
-							<option>1966</option>
-							<option>1965</option>
-							<option>1964</option>
-							<option>1963</option>
-							<option>1962</option>
-							<option>1961</option>
-							<option>1960</option>
-							<option>1959</option>
-							<option>1958</option>
-							<option>1957</option>
-							<option>1956</option>
-							<option>1955</option>
-							<option>1954</option>
-							<option>1953</option>
-							<option>1952</option>
-							<option>1951</option>
-							<option>1950</option>
-							<option>1949</option>
-							<option>1948</option>
-							<option>1947</option>
-							<option>1946</option>
-							<option>1945</option>
-							<option>1944</option>
-							<option>1943</option>
-							<option>1942</option>
-							<option>1941</option>
-							<option>1940</option>
-							<option>1939</option>
-							<option>1938</option>
-							<option>1937</option>
-							<option>1936</option>
-							<option>1935</option>
-							<option>1934</option>
-							<option>1933</option>
-							<option>1932</option>
-							<option>1931</option>
-							<option>1930</option>
-							<option>1929</option>
-							<option>1928</option>
-							<option>1927</option>
-							<option>1926</option>
-							<option>1925</option>
-							<option>1924</option>
-							<option>1923</option>
-							<option>1922</option>
-							<option>1921</option>
-							<option>1920</option>
-							<option>1919</option>
-							<option>1918</option>
-							<option>1917</option>
-							<option>1916</option>
-							<option>1915</option>
-							<option>1914</option>
-							<option>1913</option>
-							<option>1912</option>
-							<option>1911</option>
-							<option>1910</option>
-							<option>1909</option>
-							<option>1908</option>
-							<option>1907</option>
-							<option>1906</option>
-							<option>1905</option>
-						</select>
+    
+    <!--home start-->
+    
+    <div id="home">
+    	<div class="headerLine">
+	<div id="menuF" class="default">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-md-4">
+					<div>
+						<a href="#">
+							<img src="images/logo.png">
+						</a>
 					</div>
-					<br><br>
-					<div id="button10">Search Phonebook!</div>
 				</div>
-				<div id="button11">Search Again!</div>
+				<div class="col-md-8">
+					<div class="navmenu"style="text-align: center;">
+						<ul id="menu">
+							<li class="active" ><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#project">Projects</a></li>
+							<li><a href="#news">News</a></li>
+							<li class="last"><a href="#contact">Contact</a></li>
+							<!--li><a href="#features">Features</a></li-->
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+	</div>
+		<div class="container">
+			<div class="row wrap">
+				<div class="col-md-12 gallery"> 
+						<div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+							<div data-thumb="" data-src="images/slides/blank.gif">
+								<div class="img-responsive camera_caption fadeFromBottom">
+									<h2>We listen.</h2>
+								</div>
+							</div>
+							<div data-thumb="" data-src="images/slides/blank.gif">
+								<div class="img-responsive camera_caption fadeFromBottom">
+									<h2>We discuss.</h2>
+								</div>
+							</div>
+							<div data-thumb="" data-src="images/slides/blank.gif">
+								<div class="img-responsive camera_caption fadeFromBottom">
+									<h2>We develop.</h2>
+								</div>
+							</div>
+						</div><!-- #camera_wrap_1 -->
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 project">
+					<h3 id="counter">0</h3>
+					<h4>Awesome Projects</h4>
+					<p>Dolor sit amet, consectetur adipiscing elit quisque tempus eget diam et lorem a laoreet phasellus ut nisi id leo molestie. </p>
+				</div>
+				<div class="col-md-4 project">
+					<h3 id="counter1">0</h3>
+					<h4>Happy Customers</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus eget diam et. laoreet phasellus ut nisi id leo.  </p>
+				</div>
+				<div class="col-md-4 project">
+					<h3 id="counter2" style="margin-left: 20px;">0</h3>
+					<h4 style="margin-left: 20px;">Professional Awards</h4>
+					<p>Consectetur adipiscing elit quisque tempus eget diam et laoreet phasellus ut nisi id leo molestie adipiscing vitae a vel. </p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 cBusiness">
+					<h3>The Best Way to Create Business Site &ndash; Attractive One Page</h3>
+					<h4>Discover elegant solution for your online business fast, reliable, affordable.</h4>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 centPic">
+					<img class="img-responsive"  src="images/bizPic.png"/>
+				</div>
+			</div>
+		</div>   
+    </div>
+    
+    <!--about start-->    
+    
+    <div id="about">
+    	<div class="line2">
+			<div class="container">
+				<div class="row Fresh">
+					<div class="col-md-4 Des">
+						<i class="fa fa-heart"></i>
+						<h4>Fresh & Clean Design</h4>
+						<p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat </p>
+					</div>
+					<div class="col-md-4 Ver">
+						<i class="fa fa-cog"></i>
+						<h4>Very Flexible</h4>
+						<p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat </p>
+					</div>
+					<div class="col-md-4 Fully">
+						<i class="fa fa-tablet"></i>
+						<h4>Fully Responsive</h4>
+						<p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat </p>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 wwa">
+					<span name="about" ></span>
+					<h3>Who We Are? Meet Our Team!</h3>
+					<h4>We listen, we discuss, we advise and develop. We love to learn and use the latest technologies.</h4>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row team">
+				<div class="col-md-4 b1">
+						<img class="img-responsive" src="images/picTeam/picT1.png">
+						<h4>Tom Simpson</h4>
+						<h5>CEO</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+				</div>
+			
+			
+				<div class="col-md-4">
+						<img class="img-responsive" src="images/picTeam/picT2.png">
+						<h4>John Doe</h4>
+						<h5>Project Manager</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+				</div>
+		
+			
+				<div class="col-md-4 b3">
+						<img class="img-responsive" src="images/picTeam/picT3.png">
+						<h4>Anna White</h4>
+						<h5>Developer</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 hr1">
+					<hr/>
+				</div>
+			</div>
+		</div>		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 bar">
+					<div class="progB chart" data-percent="64"  data-animate="3500">
+						<div class="chart chart-content">
+							<div class="percentage" data-percent="64">
+							  <span class="percent">64</span>
+							</div>
+						</div>
+					</div>
+					<div class="textP">
+						<h3>WordPress</h3>
+						<p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+					</div>
+				</div>
+				<div class="col-md-3 bar">
+					<div class="progB chart" data-percent="22"  data-animate="3500">
+						<div class="chart chart-content">
+							<div class="percentage" data-percent="22">
+							  <span class="percent">22</span>
+							</div>
+						</div>
+					</div>
+					<div class="textP">
+						<h3>HTML5</h3>
+						<p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+					</div>
+				</div>
+				<div class="col-md-3 bar ">
+					<div class="progB chart" data-percent="84"  data-animate="3500">
+						<div class="chart chart-content">
+							<div class="percentage" data-percent="22">
+							  <span class="percent">84</span>
+							</div>
+						</div>
+					</div>
+					<div class="textP">
+						<h3>CSS3</h3>
+						<p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+					</div>
+				</div>
+				<div class="col-md-3 bar ">
+					<div class="progB chart" data-percent="45"  data-animate="3500">
+						<div class="chart chart-content">
+							<div class="percentage" data-percent="45">
+							  <span class="percent">45</span>
+							</div>
+						</div>
+					</div>
+					<div class="textP">
+						<h3>Woocommerce</h3>
+						<p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		
+		<div class="container">
+			<div class="row aboutUs">
+				<div class="col-md-12 ">
+					<h3>What Our Customers Say About Us?</h3>
+				</div>
+			</div>
+		</div>
+		
+		<div style="position: relative;">
+		
+			<div class="container">
+				<div class="row about">
+					<div class="col-md-6">
+						<div class="about1">
+						<img class="pic1Ab" src="images/picAbout/aboutP1.png">
+							<h3>Anna Smith, Company Inc.</h3>
+							<p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis. aliquam, nulla nisi lobortis elit ac.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="about2">
+						<img class="pic2Ab" src="images/picAbout/aboutP2.png">
+							<h3>John Doe, Company Inc.</h3>
+							<p>Consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo, adipiscing auctor, ut auctor feugiat fermentum nec quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, ac luctus.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="horL"></div>
+		
+			<div class="container">
+				<div class="row about">
+					<div class="col-md-6">
+						<div class="about1">
+						<img class="pic1Ab" src="images/picAbout/aboutP3.png">
+							<h3>Tom Sawyer, Company Inc.</h3>
+							<p>A auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, acnterdum ante feugiat vitae.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="about2">
+						<img class="pic2Ab" src="images/picAbout/aboutP4.png">
+							<h3>Sarah White, Company Inc.</h3>
+							<p>Ornare nibh a auctor, mauris scelerisque eu proin nec urna nec a quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra felis et venenatis aliquam, nulla nisi lobortis elit, ac eleifend nisl ante nec lorem. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+    </div>
+    <!--project start-->    
+    <div id="project">    	
+		<div class="line3">
+			<div class="container">
+				<div id="project1" ></div>
+				<div class="row Ama">
+					<div class="col-md-12">
+					<span name="projects" id="projectss"></span>
+					<h3>Our Amazing Works</h3>
+					<p>Right here we've got something you gonna love</p>
+					</div>
+				</div>
+			</div>
+		</div>          
+    
+    
+       <div class="container">
+		
+		<div class="row">
+			<!-- filter_block -->
+				<div id="options" class="col-md-12" style="text-align: center;">	
+					<ul id="filter" class="option-set" data-option-key="filter">
+						<li><a class="selected" href="#filter" data-option-value="*" class="current">All Works</a></li>
+						<li><a href="#filter" data-option-value=".polygraphy">Polygraphy</a></li>
+						<li><a href="#filter" data-option-value=".branding">Branding</a></li>
+						<li><a href="#filter" data-option-value=".web">Web UI</a></li>
+						<li><a href="#filter" data-option-value=".text_styles">Text Styles</a></li>
+					</ul>
+				</div><!-- //filter_block -->
+		
+		
+		
+			<div class="portfolio_block columns3   pretty" data-animated="fadeIn">	
+					<div class="element col-sm-4   gall branding">
+						<a class="plS" href="images/prettyPhotoImages/pic1.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic1.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Recycled Paper - Business Card Mock Up</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>215</li>
+								<li><a class="heart" href="#"><i class="fa-heart-o"></i>14</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="element col-sm-4  gall branding">
+						<a class="plS" href="images/prettyPhotoImages/pic2.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic2.jpg" alt="pic2 Gallery"/>
+						</a>
+						<div class="view project_descr center">
+							<h3><a href="#">Environment Logos Set</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>369</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>86</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="element col-sm-4  gall web">
+						<a class="plS" href="images/prettyPhotoImages/pic3.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic3.jpg" alt="pic3 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Beag Simple WEB UI</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>400</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>124</a></li>
+							</ul>
+						</div>
+					</div>
+		
+		
+					
+					<div class="element col-sm-4  gall  text_styles">
+						<a class="plS" href="images/prettyPhotoImages/pic4.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic4.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Pop Candy Text Effect</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>480</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>95</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="element col-sm-4  gall  web">
+						<a class="plS" href="images/prettyPhotoImages/pic5.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic5.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr center">
+							<h3><a href="#">User Interface Elements</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>215</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>14</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="element col-sm-4  gall  polygraphy">
+						<a class="plS" href="images/prettyPhotoImages/pic6.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic6.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Stationery Branding Mock Up</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>375</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>102</a></li>
+							</ul>
+						</div>
+					</div>		
+					<div class="element col-sm-4   gall branding">
+						<a class="plS" href="images/prettyPhotoImages/pic7.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic7.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Darko - Business Card Mock Up</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>440</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>35</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="element col-sm-4  gall text_styles">
+						<a class="plS" href="images/prettyPhotoImages/pic8.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic8.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Foil Mini Badges</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>512</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>36</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="element col-sm-4  gall polygraphy">
+						<a class="plS" href="images/prettyPhotoImages/pic9.jpg" rel="prettyPhoto[gallery2]">
+							<img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic9.jpg" alt="pic1 Gallery"/>
+						</a>
+						<div class="view project_descr ">
+							<h3><a href="#">Woody Poster Text Effect</a></h3>
+							<ul>
+								<li><i class="fa fa-eye"></i>693</li>
+								<li><a  class="heart" href="#"><i class="fa-heart-o"></i>204</a></li>
+							</ul>
+						</div>
+					</div>			
+			</div>
+			
+			
+				
+					<div class="col-md-12 cBtn  lb" style="text-align: center;">
+						<ul class="load_more_cont ">
+							<li class="dowbload btn_load_more">
+								<a href="javascript:void(0);" >
+									<i class="fa fa-arrow-down"></i>Load More Projects
+								</a>
+							</li>
+							<li class="buy">
+								<a href="#">
+									<i class="fa fa-shopping-cart"></i>Buy on Themeforest
+								</a>
+							</li>
+						</ul>
+					</div>
+			
+		</div>
+			
+			<script type="text/javascript">
+				jQuery(window).load(function(){
+					items_set = [
+					
+						{category : 'branding', lika_count : '77', view_count : '234', src : 'images/prettyPhotoImages/pic9.jpg', title : 'Foil Mini Badges', content : '' },
+						
+						{category : 'polygraphy', lika_count : '45', view_count : '100', src : 'images/prettyPhotoImages/pic7.jpg', title : 'Darko – Business Card Mock Up', content : '' },
+						
+						{category : 'text_styles', lika_count : '22', view_count : '140', src : 'images/prettyPhotoImages/pic8.jpg', title : 'Woody Poster Text Effect', content : '' }
+						
+
+					];
+					jQuery('.portfolio_block').portfolio_addon({
+						type : 1, // 2-4 columns simple portfolio
+						load_count : 3,
+						
+						items : items_set
+					});
+					$('#container').isotope({
+					  animationOptions: {
+						 duration: 900,
+						 queue: false
+					   }
+					});
+				});
+			</script>
+		</div>
+    </div>    
+    
+    <!--news start-->
+    
+    <div id="news">
+    	<div class="line4">		
+			<div class="container">
+				<div class="row Ama">
+					<div class="col-md-12">
+					<h3>What&rsquo;s New?</h3>
+					<p>Get the latest news from our blog</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+				<div class="row news">
+					<div class="col-md-6  text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news1.jpg"/>
+					<h3><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news2.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row news2 news">
+					<div class="col-md-6 text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news3.jpg"/>
+					<h3><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news4.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row news2 news">
+					<div class="col-md-6 text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news5.jpg"/>
+					<h3 ><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news6.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="container hideObj2" style="display:none;">
+				<div class="row news2 news">
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news6.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news5.jpg"/>
+					<h3 ><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+			<div class="row cBtn">
+				<div class="col-md-12" style="text-align: center; margin-bottom: -90px; z-index: 10;">
+					<ul class="mNews">
+						<li class="dowbload bhide2"><a href="#"><i class="fa fa-arrow-down"></i>Load More news</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    
+    <!--contact start-->
+    
+    <div id="contact">
+    	<div class="line5">					
+			<div class="container">
+				<div class="row Ama">
+					<div class="col-md-12">
+					<h3>Got a Question? We&rsquo;re Here to Help!</h3>
+					<p>Get in touch with us</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 col-xs-12 forma">
+					<form>
+						<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>
+						<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>
+						<input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Subject'/>
+						<textarea type="text" class="col-md-12 col-xs-12 Message" name='Message' placeholder='Message *'></textarea>
+						<div class="cBtn col-xs-12">
+							<ul>
+								<li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
+								<li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>
+							</ul>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-3 col-xs-12 cont">
+					<ul>
+						<li><i class="fa fa-home"></i>5512 Lorem Ipsum Vestibulum 666/13</li>
+						<li><i class="fa fa-phone"></i>+1 800 789 50 12, +1 800 450 6935</li>
+						<li><a href="#"><i class="fa fa-envelope"></i>mail@compname.com</li></a>
+						<li><i class="fa fa-skype"></i>compname</li>
+						<li><a href="#"><i class="fa fa-twitter"></i>Twitter</li></a>
+						<li><a href="#"><i class="fa fa-facebook-square"></i>Facebook</li></a>
+						<li><a href="#"><i class="fa fa-dribbble"></i>Dribbble</li></a>
+						<li><a href="#"><i class="fa fa-flickr"></i>Flickr</li></a>
+						<li><a href="#"><i class="fa fa-youtube-play"></i>YouTube</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="line6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d48386.401887313725!2d-73.9407136!3d40.7147117!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1402409149092" width="100%" height="750" frameborder="0" style="border:0"></iframe>			
+		</div>
+		<div class="container">
+			<div class="row ftext">
+				<div class="col-md-12">
+				<a id="features"></a>
+				<h3>We Care About Our Clients and Can Make Their Life Easier!</h3>
+				<p>The main peculiarity of template is the striking presentation when visitors just need to use the scrolling option to find all necessary information about your web project. </p>
+				</div>
+				<div class="cBtn">
+					<ul style="margin-top: 23px; margin-bottom: 0px; padding-left: 26px;">
+						<li class="dowbload"><a href="#"><i class="fa fa-star"></i>View All Features</a></li>
+						<li class="buy"><a href="#"><i class="fa fa-download"></i>Buy This Template</a></li>
+					</ul>
+			</div>
+			</div>
+		</div>
+		<div class="line7">
+			<div class="container">
+				<div class="row footer">
+					<div class="col-md-12">
+						<h3>Subscribe for Our Newsletter!</h3>
+						<p>Subscribe to our newsletter email to get notification about fresh news, latest promos, giveaways and free stuff from Skew. Stay always up-to-date!</p>
+						<div class="fr">
+						<div style="display: inline-block;">
+							<input class="col-md-6 fEmail" name='Email' placeholder='Enter Your Email'/>
+							<a href="#" class="subS">Subscribe!</a>
+						</div>
+						</div>
+					</div>
+					<div class="soc col-md-12">
+						<ul>
+							<li class="soc1"><a href="#"></a></li>
+							<li class="soc2"><a href="#"></a></li>
+							<li class="soc3"><a href="#"></a></li>
+							<li class="soc4"><a href="#"></a></li>
+							<li class="soc5"><a href="#"></a></li>
+							<li class="soc6"><a href="#"></a></li>
+							<li class="soc7"><a href="#"></a></li>
+							<li class="soc8"><a href="#"></a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lineBlack">
+			<div class="container">
+				<div class="row downLine">
+					<div class="col-md-12 text-right">
+						<!--input  id="searchPattern" type="search" name="pattern" value="Search the Site" onblur="if(this.value=='') {this.value='Search the Site'; }" onfocus="if(this.value =='Search the Site' ) this.value='';this.style.fontStyle='normal';" style="font-style: normal;"/-->
+						<input  id="searchPattern" type="search" placeholder="Search the Site"/><i class="glyphicon glyphicon-search" style="font-size: 13px; color:#a5a5a5;" id="iS"></i>
+					</div>
+					<div class="col-md-6 text-left copy">
+						<p>Copyright &copy; 2014 Timber HTML Template. All Rights Reserved.</p>
+					</div>
+					<div class="col-md-6 text-right dm">
+						<ul id="downMenu">
+							<li class="active"><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#project1">Projects</a></li>
+							<li><a href="#news">News</a></li>
+							<li class="last"><a href="#contact">Contact</a></li>
+							<!--li><a href="#features">Features</a></li-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>		
+		
+		
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.js"></script>
+	<script>
+			$(document).ready(function(){
+			$(".bhide").click(function(){
+				$(".hideObj").slideDown();
+				$(this).hide(); //.attr()
+				return false;
+			});
+			$(".bhide2").click(function(){
+				$(".container.hideObj2").slideDown();
+				$(this).hide(); // .attr()
+				return false;
+			});
+				
+			$('.heart').mouseover(function(){
+					$(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
+				}).mouseout(function(){
+					$(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
+				});
+				
+				function sdf_FTS(_number,_decimal,_separator)
+				{
+				var decimal=(typeof(_decimal)!='undefined')?_decimal:2;
+				var separator=(typeof(_separator)!='undefined')?_separator:'';
+				var r=parseFloat(_number)
+				var exp10=Math.pow(10,decimal);
+				r=Math.round(r*exp10)/exp10;
+				rr=Number(r).toFixed(decimal).toString().split('.');
+				b=rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g,"\$1"+separator);
+				r=(rr[1]?b+'.'+rr[1]:b);
+
+				return r;
+}
+				
+			setTimeout(function(){
+					$('#counter').text('0');
+					$('#counter1').text('0');
+					$('#counter2').text('0');
+					setInterval(function(){
+						
+						var curval=parseInt($('#counter').text());
+						var curval1=parseInt($('#counter1').text().replace(' ',''));
+						var curval2=parseInt($('#counter2').text());
+						if(curval<=707){
+							$('#counter').text(curval+1);
+						}
+						if(curval1<=12280){
+							$('#counter1').text(sdf_FTS((curval1+20),0,' '));
+						}
+						if(curval2<=245){
+							$('#counter2').text(curval2+1);
+						}
+					}, 2);
+					
+				}, 500);
+			});
+	</script>
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('#menu').slicknav();
+		
+	});
+	</script>
+	
+	<script type="text/javascript">
+    $(document).ready(function(){
+       
+        var $menu = $("#menuF");
+            
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("default")
+                           .addClass("fixed transbg")
+                           .fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("fixed transbg")
+                           .addClass("default")
+                           .fadeIn('fast');
+                });
+            }
+        });
+	});
+    //jQuery
+	</script>
+	<script>
+		/*menu*/
+		function calculateScroll() {
+			var contentTop      =   [];
+			var contentBottom   =   [];
+			var winTop      =   $(window).scrollTop();
+			var rangeTop    =   200;
+			var rangeBottom =   500;
+			$('.navmenu').find('a').each(function(){
+				contentTop.push( $( $(this).attr('href') ).offset().top );
+				contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+			})
+			$.each( contentTop, function(i){
+				if ( winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom ){
+					$('.navmenu li')
+					.removeClass('active')
+					.eq(i).addClass('active');				
+				}
+			})
+		};
+		
+		$(document).ready(function(){
+			calculateScroll();
+			$(window).scroll(function(event) {
+				calculateScroll();
+			});
+			$('.navmenu ul li a').click(function() {  
+				$('html, body').animate({scrollTop: $(this.hash).offset().top - 80}, 800);
+				return false;
+			});
+		});		
+	</script>	
+	<script type="text/javascript" charset="utf-8">
+
+		jQuery(document).ready(function(){
+			jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true, social_tools: ''});
+			
+		});
+	</script>
 	</body>
+	
 </html>
